@@ -1,6 +1,7 @@
 package functions.rfc.sap.document.sap_com;
 
 import org.apache.axis2.client.Options;
+import org.apache.axis2.client.ServiceClient;
 import org.apache.axis2.transport.http.impl.httpclient3.HttpTransportPropertiesImpl.Authenticator;
 import org.apache.commons.httpclient.HttpClient;
 
@@ -21,7 +22,8 @@ public class client {
 //			functions.rfc.sap.document.sap_com.Z_Hello  client = z_HELLO_ServiceLocator.getZ_HELLO();
 
 		    
-		    org.apache.axis2.client.ServiceClient _serviceClient = new org.apache.axis2.client.ServiceClient(z_HELLO_ServiceLocator);
+//		    ServiceClient _serviceClient = new ServiceClient(z_HELLO_ServiceLocator);
+		    ServiceClient _serviceClient = new ServiceClient();
 			Authenticator auth = new Authenticator();
 			auth.setUsername("20048790");
 			auth.setPassword("Dhanu100.");
